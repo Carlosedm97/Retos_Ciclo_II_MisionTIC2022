@@ -1,0 +1,12 @@
+SELECT 'Consulta 1';
+SELECT bicicletas.nombre_fabricante as nombre_fabricante FROM bicicletas union SELECT motosElectricas.nombre_fabricante FROM motosElectricas ORDER BY nombre_fabricante;
+SELECT 'Consulta 2';
+SELECT * FROM bicicletas WHERE año_construccion >= 2019 ORDER BY bicicletas.nombre_fabricante;
+SELECT 'Consulta 3';
+SELECT nombre_fabricante FROM motosElectricas WHERE proveedor = 101;
+SELECT 'Consulta 4';
+SELECT nombre_fabricante FROM intencionesDeCompra WHERE username = 'lucky' ORDER BY intencionesDeCompra.nombre_fabricante;
+SELECT 'Consulta 5';
+SELECT username, nombres_cliente, apellidos_cliente FROM clientes JOIN intencionesDeCompra USING(username) WHERE nombre_fabricante = 'Yeti' ORDER BY clientes.username;
+SELECT 'Consulta 6';
+SELECT COUNT(*) FROM bicicletas WHERE año_construccion >= 2019;
